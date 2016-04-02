@@ -68,7 +68,14 @@ class Ccontact
 	double aB; 		// bonding radius;
 	double deltaNB;	// bonding overlap;
 	
-	bool Flag_Boundary;	
+	bool Flag_Boundary;
+	
+	//AK Addition - beginning
+	double melt_vol;
+	double melt_vij;
+	double fcap;
+	double CONTACT_ANGLE;
+	//AK Addition - end
 	
 	
 	//void operator = (Ccontact ); /**< Replace the contact by another contact para. */
