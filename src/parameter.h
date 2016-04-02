@@ -34,6 +34,12 @@ public:
 	double J;						/**< Dimentionless thermal time: \f$ J = thermal_time/inertial time. \f$. */
 	double I;						/**< Dimentionless inertial number: \f$ I_i= \dot \gamma \sqrt{\frac{m}{PR}}\f$. */
 	
+	//AK Addition - beginning
+	double MELT_SURFACE_TENSION;				/**< Melt surface tenson.*/
+	double MIN_CONTACT_ANGLE;				/**< Melt minimum contact angle.*/
+	double MAX_CONTACT_ANGLE;				/**< Melt maximum contact angle.*/
+	//AK Addition - end
+	
 	void dimensionless_number(Ccell &, QList <Cparticle> &); 
 	friend ofstream &operator<<(ofstream &,Cparameter); 
 	friend ifstream & operator>>(ifstream &,Cparameter &);
