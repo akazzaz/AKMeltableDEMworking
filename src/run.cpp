@@ -83,6 +83,14 @@ void Crun::init_evolve(void)
 	get_secure("Enter the thermal expansion of bulk grains","THER_EXPANSION",config.parameter.thermal_expansion);
 	
 	//End of parameter input
+	//AK Addition - beginning
+	get_secure("Do you want to simule the melt surface tension", "SURFACE_TENSION",	config.simule_melt_surface_tension);
+	if (config.simule_melt_surface_tension){
+		get_secure("Enter the melt surface tension","MELT_SURFACE_TENSION",config.parameter.MELT_SURFACE_TENSION);
+		get_secure("Enter the melt minimum contact angle","MIN_CONTACT_ANGLE",config.parameter.MIN_CONTACT_ANGLE);
+		get_secure("Enter the melt maximum contact angle","MAX_CONTACT_ANGLE",config.parameter.MAX_CONTACT_ANGLE);
+	}
+	//AK Addition - end
 		
 		
 	//time_step
