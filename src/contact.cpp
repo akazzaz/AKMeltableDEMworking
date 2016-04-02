@@ -35,6 +35,12 @@ Ccontact::Ccontact(Cparticle *partA, Cparticle *partB, Ccell *c, Cparameter *par
 	cell= c;
 	parameter= para;
 	Flag_Boundary=0;
+	//AK Addition - beginning
+	melt_vol=0.0;
+	melt_vij=0.0;
+	fcap=0.0;
+	CONTACT_ANGLE=parameter->CONTACT_ANGLE_MIN;
+	//AK Addition - end
 }
 
 bool Ccontact::AM_I_CONTACTING()
