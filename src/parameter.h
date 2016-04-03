@@ -35,6 +35,10 @@ public:
 	double I;						/**< Dimentionless inertial number: \f$ I_i= \dot \gamma \sqrt{\frac{m}{PR}}\f$. */
 	
 	//AK Addition - beginning
+	bool simule_melt_surface_tension;	/**< if true, the effect of melt surface tension is simulated.*/
+	//AK addition - end
+	
+	//AK Addition - beginning
 	double MELT_SURFACE_TENSION;				/**< Melt surface tenson.*/
 	double MIN_CONTACT_ANGLE;				/**< Melt minimum contact angle.*/
 	double MAX_CONTACT_ANGLE;				/**< Melt maximum contact angle.*/
