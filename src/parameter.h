@@ -42,6 +42,7 @@ public:
 	double MELT_SURFACE_TENSION;				/**< Melt surface tenson.*/
 	double MIN_CONTACT_ANGLE;				/**< Melt minimum contact angle.*/
 	double MAX_CONTACT_ANGLE;				/**< Melt maximum contact angle.*/
+	double MAX_CAP_LENGTH;					/**< Melt maximum capillary length.*/
 	//AK Addition - end
 	
 	void dimensionless_number(Ccell &, QList <Cparticle> &); 
