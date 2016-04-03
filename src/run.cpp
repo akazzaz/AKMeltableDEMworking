@@ -89,6 +89,7 @@ void Crun::init_evolve(void)
 		get_secure("Enter the melt surface tension","MELT_SURFACE_TENSION",config.parameter.MELT_SURFACE_TENSION);
 		get_secure("Enter the melt minimum contact angle","MIN_CONTACT_ANGLE",config.parameter.MIN_CONTACT_ANGLE);
 		get_secure("Enter the melt maximum contact angle","MAX_CONTACT_ANGLE",config.parameter.MAX_CONTACT_ANGLE);
+		get_secure("Enter the melt maximum capillary length","MAX_CAP_LENGTH",config.parameter.MAX_CAP_LENGTH);
 	}
 	//AK Addition - end
 		
