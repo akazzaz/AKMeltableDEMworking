@@ -30,9 +30,6 @@ class Cconfig
 	bool simule_thermal_expansion;	/**< if true, the thermal expansion of particle will simulate.*/
 	bool simule_thermal_production;	/**< if true, the motion of particle will simulate.*/
 	bool simule_thermal_conduction;	/**< if true, the heat transfer through contact will simulate.*/
-	//AK Addition - begin
-	bool simule_melt_surface_tension;	/**< if true, the effect of melt surface tension is simulated.*/
-	//AK addition - end
   
 	void Evale_conductivity_tensor();	/**< Measure the conductivity tensor*/
   
