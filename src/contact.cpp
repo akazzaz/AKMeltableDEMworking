@@ -55,8 +55,14 @@ bool Ccontact::AM_I_CONTACTING()
 	dx=dX.NORM();
 	
 	deltaN = dx-pA->R-pB->R;
-	if(deltaN>=0) return false; //there is no contact	
+	//AK Modification - beginning
+	if(!parameter.simule_melt_surface_tension && deltaN>=0) return false; //AK modification: if(deltaN>=0) return false; //there is no contact	
+	else if (parameter.simule_melt_surface_tension && melt_vol==0.0 && 4/3*PI*(pow(pA->R,3)+pow(pB->R,3)-pow(pA->RS,3)-pow(pB->RS,3))>=0.1 && deltaN <= 0.2*min(pA->R, pB->R)) return true; // initial contact with sufficient water supply and smaller enough gap.
+	else if (parameter.simule_melt_surface_tension && melt_vol<=1e-30 && deltaN>=0) return false; // non-existing capillary bridge
+	else if (parameter.simule_melt_surface_tension && melt_vol>=1e-30 && deltaN>=min(pow(melt_vol,0.3333),parameter.MAX_CAP_LENGTH)) return false; // existing capillary bridge, rupture
+	//AK Modification - end
 	else return true;
+	
 }
 
 void Ccontact::EVALE_Geo()
